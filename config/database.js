@@ -1,6 +1,7 @@
 const path = require('path');
-
+/** @param {{ env: any }} param0 */
 module.exports = ({ env }) => {
+  /** @type {'mysql' | 'postgres' | 'sqlite'} */
   const client = env('DATABASE_CLIENT', 'sqlite');
 
   const connections = {
